@@ -81,6 +81,8 @@ python manage.py migrate
 
 Iniciar el servidor:
 
+debes estar en la ruta /proyecto_test/procesador para que funcione
+
 ```bash
 python manage.py runserver
 ```
