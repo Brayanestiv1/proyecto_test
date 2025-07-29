@@ -160,6 +160,51 @@ INTERVALOS = [
 
 ---
 
+## 🐳 Versión con Docker
+
+Esta rama contiene una versión del proyecto que puede ejecutarse usando **Docker y Docker Compose**, sin necesidad de instalar Python ni dependencias manualmente en el sistema.
+
+### 🔧 Requisitos
+
+- Docker instalado  
+- Docker Compose incluido (ya viene con Docker Desktop)
+
+### ▶️ Instrucciones para ejecutar
+
+1. Cloná esta rama:
+   ```bash
+   git clone -b docker-version https://github.com/usuario/proyecto_test.git
+   cd proyecto_test
+Levantá el contenedor:
+
+bash
+Copiar
+Editar
+docker compose up --build
+Accedé al servidor en:
+
+arduino
+Copiar
+Editar
+http://localhost:8000
+Probá el endpoint en Postman o con curl:
+
+bash
+Copiar
+Editar
+curl -X POST http://localhost:8000/procesar/ \
+  -H "Content-Type: application/json" \
+  -d "{\"archivo\": \"PRUEBA_20250129.txt\"}"
+
+---
+  
+### 📁 Archivos adicionales
+Dockerfile: define la imagen del proyecto.
+
+docker-compose.yml: orquesta la ejecución del contenedor.
+
+.dockerignore: evita copiar archivos innecesarios al contenedor.
+
 ## 🚩 Autor
 
 Brayan Vera
